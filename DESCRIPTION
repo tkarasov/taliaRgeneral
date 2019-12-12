@@ -1,0 +1,26 @@
+ 
+Package: taliaRgeneral
+Title: A set of R functions for an easy life and analyses
+Version: 0.0.1
+Authors@R: person("Talia", "Karasov", email = "tkarasov@gmail.com", role = c("aut", "cre"))
+Description: This package contains functions for data manipulation, fast
+    plotting, things that you have to write in every script.
+Depends:
+    R (>= 3.2.0)
+Imports:
+Suggests:
+    ggplot2,
+    cowplot,
+    RColorBrewer,
+    dplyr,
+    tidyr,
+    devtools,
+    raster,
+    cshapes,
+    gpclib,
+    rgdal
+URL: https://github.com/tkarasov/taliaRgeneral
+License: To be determined
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1.9000
