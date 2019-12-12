@@ -1,6 +1,6 @@
  
 Package: taliaRgeneral
-Title: A set of R functions for an easy life and analyses
+Title: R functions that I use a lot
 Version: 0.0.1
 Authors@R: person("Talia", "Karasov", email = "tkarasov@gmail.com", role = c("aut", "cre"))
 Description: This package contains functions for data manipulation, fast
