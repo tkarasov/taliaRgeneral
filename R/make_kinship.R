@@ -18,12 +18,12 @@ make_kinship<-function(vcf){
   genofile <- snpgdsVCF2GDS(vcf.fn, "/ebio/abt6_projects9/pathodopsis_microbiomes/data/plant_genotype/test.gds", method="biallelic.only")
   #genofile <- snpgdsOpen("/ebio/abt6_projects9/pathodopsis_microbiomes/data/plant_genotype/test.gds")
   #snpgdsClose("/ebio/abt6_projects9/pathodopsis_microbiomes/data/plant_genotype/test.gds")
-  ibs <- snpgdsIBS(genofile, num.thread=2)
+  ibs <- snpgdsIBS(snpgdsOpen(genofile), num.thread = 4)
   
   set.seed(1000)
   
   # Try different LD thresholds for sensitivity analysis
-  snpset <- snpgdsLDpruning(genofile, ld.threshold=0.2)
+  # snpset <- snpgdsLDpruning(genofile, ld.threshold=0.2)
   return(ibs)
 }
 
