@@ -1,4 +1,6 @@
 # This function takes the results object from deseq and plots with a user defined pvalue cutoff
+# To add other details:
+
 plot_deseq<-function(res, pval = 0.01, lfc = 1){
   tab = data.frame(logFC = res$log2FoldChange, negLogPval = -log10(res$pvalue))
   head(tab)
@@ -10,6 +12,8 @@ plot_deseq<-function(res, pval = 0.01, lfc = 1){
     xlab(expression(log[2]~fold~change)) + 
     ylab(expression(-log[10]~pvalue)) +
     geom_point(data = tab[signGenes, ], aes(x = logFC, y = negLogPval),  pch = 16, cex = 2, col = "red") +
+    geom_hline(yintercept = -log10(pval), col = "green3", lty = 2) +
+  #  mtext(paste("pval =", pval), side = 4, at = -log10(pval), cex = 0.8, line = 0.5, las = 1) +
     theme_bw()
   # abline(h = -log10(pval), col = "green3", lty = 2) 
   # abline(v = c(-lfc, lfc), col = "blue", lty = 2) 
