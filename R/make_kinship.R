@@ -1,16 +1,3 @@
-#' @title Make Kinship Matrix
-#' @description Reads in vcf file and creates kinship covariance matrix
-#' @param otu.file File containing the vcf
-#'
-
-
-
-#tutorial on relatedness stuff here: https://bioconductor.statistik.tu-dortmund.de/packages/3.2/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.html#format-conversion-from-vcf-files
-#vcf = "/ebio/abt6_projects9/pathodopsis_microbiomes/data/plant_genotype/poolsGVCF.filtered_snps_final.PASS.bi.vcf"
-#genot_dir = "/ebio/abt6_projects9/pathodopsis_microbiomes/data/plant_genotype/"
-#library(SNPRelate)
-
-
 make_kinship<-function(vcf){
   vcf.fn <- vcf
   
@@ -27,3 +14,7 @@ make_kinship<-function(vcf){
   return(ibs)
 }
 
+#tutorial on relatedness stuff here: https://bioconductor.statistik.tu-dortmund.de/packages/3.2/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.html#format-conversion-from-vcf-files
+#vcf = "/ebio/abt6_projects9/pathodopsis_microbiomes/data/plant_genotype/poolsGVCF.filtered_snps_final.PASS.bi.vcf"
+#genot_dir = "/ebio/abt6_projects9/pathodopsis_microbiomes/data/plant_genotype/"
+#library(SNPRelate)
